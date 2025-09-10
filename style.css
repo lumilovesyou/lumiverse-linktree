@@ -52,6 +52,9 @@ svg {
   /* Sizing */
   width: 100vw;
 
+  /* Animation */
+  animation: 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) 100ms 1 both slide-bottom; 
+
   /* Positioning */
   flex-direction: column;
   align-content: center;
@@ -130,9 +133,14 @@ svg {
   color: #02171c;
 }
 
-#button:hover svg {
+#button:hover .stroke {
   /* Colours */
   stroke: #02171c !important;
+}
+
+#button:hover .fill {
+  /* Colours */
+  fill: #02171c !important;
 }
 
 svg {
@@ -143,6 +151,7 @@ svg {
   height: 1.5em;
 }
 
+/* Stars Twinkle Animation */
 @keyframes twinkle {
   0% {
     background-color: #ffffff;
@@ -160,5 +169,24 @@ svg {
     background-color: #ffffff;
     filter: blur(3px);
     rotate: 45deg;
+  }
+}
+
+/* Slide Downwards Animation */
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0%;
+  }
+
+  10% {
+    opacity: 0%;
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 100%;
   }
 }
