@@ -1,0 +1,164 @@
+
+
+body {
+  /* Colours */
+  color: #f8fdff;
+  background-color: black;
+  background-image: radial-gradient(#02171c, #000);
+  
+  /* Sizing */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+
+  /* Font */
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+svg {
+  /* Colours */
+  color: #f8fdff;
+}
+
+#stars {
+  /* Sizing */
+  width: 100%;
+  height: 100%;
+
+  /* Positioning */
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+#star {
+  /* Design */
+  background-color: #ffffff;
+  animation: twinkle infinite linear 0ms;
+  border-radius: 30%;
+  filter: blur(3px);
+  rotate: 45deg;
+
+  /* Positioning & Sizing */
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 50px;
+}
+
+#content {
+  /* Sizing */
+  width: 100vw;
+
+  /* Positioning */
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  display: flex;
+}
+
+#hideaway {
+  /* Positioning */
+  flex-direction: column;
+  position: absolute;
+  left: 1vw;
+  top: 1vh;
+
+  /* Colours */
+  color: #00000000;
+}
+
+#hideaway button {
+  visibility: hidden;
+}
+
+#hideaway:hover {
+  color: #aeb8bf;
+}
+
+#hideaway:hover button {
+  visibility: visible;
+}
+
+#pfp {
+  /* Positioning */
+  align-self: center;
+  margin-top: 10%;
+
+  /* Sizing */
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  height: 16vh; 
+  
+  /* Colours */
+  border: #aeb8bf solid 3px;
+  background-color: #02171c;
+}
+
+#link {
+  /* Positioning */
+  text-decoration: none;
+  align-self: center;
+}
+
+#button {
+  /* Positioning */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vh;
+  display: flex;
+  width: 20vw;
+  min-width: 10em;
+  height: 5vh;
+  z-index: 0;
+
+  /* Design */
+  text-decoration: none;
+  border-radius: 10px;
+  user-select: none;
+
+  /* Colours */
+  border: #f8fdff solid 3px;
+  color:#f8fdff;
+}
+
+#button:hover {
+  /* Colours */
+  background-color: #f8fdff;
+  color: #02171c;
+}
+
+#button:hover svg {
+  /* Colours */
+  stroke: #02171c !important;
+}
+
+svg {
+  /* Positioning */
+  display: inline-block;
+  margin: 0 0.5em 0 0;
+  aspect-ratio: 1/1;
+  height: 1.5em;
+}
+
+@keyframes twinkle {
+  0% {
+    background-color: #ffffff;
+    filter: blur(3px);
+    rotate: 45deg;
+  }
+
+  50% {
+    background-color: #ffffff9c;
+    filter: blur(2px);
+    rotate: 90deg;
+  }
+
+  100% {
+    background-color: #ffffff;
+    filter: blur(3px);
+    rotate: 45deg;
+  }
+}
