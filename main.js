@@ -1,6 +1,8 @@
 //Vars
 let counter = 0;
 let doStars = true;
+let min = 30; //50
+let max = 50; //100
 
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -61,7 +63,7 @@ function moveStars() {
         }
 
         //Add stars
-        if ((random(1, 25) == 25 && counter < 100) || counter < 50) {
+        if ((random(1, 25) == 25 && counter < max) || counter < min) {
             addStar(random(0, 100), 100)
         }
 
@@ -74,7 +76,7 @@ function moveStars() {
 }
 
 //Create stars on page load
-for (let i = 0; i < random(80,150); i++) {
+for (let i = 0; i < random(min,max); i++) { //80, 150
     addStar(random(0, 100), random(0, 100));
 }
 
