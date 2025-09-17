@@ -98,6 +98,7 @@ svg {
   /* Colours */
   border: #aeb8bf solid 3px;
   background-color: #02171c;
+  user-select: none;
 }
 
 #link {
